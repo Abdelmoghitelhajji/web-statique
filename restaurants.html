@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants des Villes</title>
+    <link rel="stylesheet" href="restaurants.css">
+</head>
+<body>
+
+<header>
+    <h1>Restaurants des Grandes Villes</h1>
+    <p>Découvrez les spécialités culinaires du monde entier</p>
+</header>
+
+<div class="container">
+
+    <!-- ========= MODELE POUR UNE VILLE ========= -->
+
+    <div class="city">
+        <img src="resto1.jpeg.jpg" alt="Marrakech Restaurant">
+        <h2>Marrakech</h2>
+        <button class="menu-btn">Voir le Menu</button>
+        <ul class="menu-list">
+            <li>Tajine</li>
+            <li>Couscous</li>
+            <li>Pastilla</li>
+            <li>Tanjia</li>
+            <li>Harira</li>
+            <li>Msemen</li>
+            <li>Rfissa</li>
+            <li>Brochettes Marocaines</li>
+            <li>Chebakia</li>
+        </ul>
+    </div>
+
+    <div class="city">
+        <img src="resto2.jpeg.jpg" alt="New York Restaurant">
+        <h2>New York</h2>
+        <button class="menu-btn">Voir le Menu</button>
+        <ul class="menu-list">
+            <li>Cheeseburger</li>
+            <li>Hot Dog</li>
+            <li>New York Pizza</li>
+            <li>Bagel</li>
+            <li>Pastrami Sandwich</li>
+            <li>Buffalo Wings</li>
+            <li>Brownie</li>
+            <li>Milkshake</li>
+            <li>Cheesecake</li>
+        </ul>
+    </div>
+
+    <div class="city">
+        <img src="resto3.jpeg.jpg" alt="Tokyo Restaurant">
+        <h2>Tokyo</h2>
+        <button class="menu-btn">Voir le Menu</button>
+        <ul class="menu-list">
+            <li>Sushi</li>
+            <li>Ramen</li>
+            <li>Tempura</li>
+            <li>Okonomiyaki</li>
+            <li>Sashimi</li>
+            <li>Udon</li>
+            <li>Yakitori</li>
+            <li>Katsudon</li>
+            <li>Mochi</li>
+        </ul>
+    </div>
+
+    <div class="city">
+        <img src="resto4.jpeg.jpg" alt="Rio de Janeiro Restaurant">
+        <h2>Rio de Janeiro</h2>
+        <button class="menu-btn">Voir le Menu</button>
+        <ul class="menu-list">
+            <li>Feijoada</li>
+            <li>Pão de queijo</li>
+            <li>Churrasco</li>
+            <li>Moqueca</li>
+            <li>Acarajé</li>
+            <li>Pastel</li>
+            <li>Brigadeiro</li>
+            <li>Coxinha</li>
+            <li>Farofa</li>
+        </ul>
+    </div>
+
+    <div class="city">
+        <img src="resto5.jpeg.jpg" alt="Barcelona Restaurant">
+        <h2>Barcelona</h2>
+        <button class="menu-btn">Voir le Menu</button>
+        <ul class="menu-list">
+            <li>Paella</li>
+            <li>Tapas</li>
+            <li>Tortilla Española</li>
+            <li>Churros</li>
+            <li>Crema Catalana</li>
+            <li>Fideuà</li>
+            <li>Jamón Ibérico</li>
+            <li>Patatas Bravas</li>
+            <li>Bocadillo</li>
+        </ul>
+    </div>
+
+    <div class="city">
+        <img src="resto6.jpeg.jpg" alt="Paris Restaurant">
+        <h2>Paris</h2>
+        <button class="menu-btn">Voir le Menu</button>
+        <ul class="menu-list">
+            <li>Baguette</li>
+            <li>Croissant</li>
+            <li>Steak Frites</li>
+            <li>Escargots</li>
+            <li>Quiche Lorraine</li>
+            <li>Crêpes</li>
+            <li>Soupe à l'oignon</li>
+            <li>Macarons</li>
+            <li>Ratatouille</li>
+        </ul>
+    </div>
+
+    <div class="city">
+        <img src="resto7.jpeg.jpg" alt="Sydney Restaurant">
+        <h2>Sydney</h2>
+        <button class="menu-btn">Voir le Menu</button>
+        <ul class="menu-list">
+            <li>Meat Pie</li>
+            <li>Fish & Chips</li>
+            <li>Lamington</li>
+            <li>Barbecue Australien</li>
+            <li>Pavlova</li>
+            <li>Schnitzel</li>
+            <li>Sydney Rock Oysters</li>
+            <li>Barramundi</li>
+            <li>Avocado Toast</li>
+        </ul>
+    </div>
+
+    <div class="city">
+        <img src="resto8.jpeg.jpg" alt="Porto Restaurant">
+        <h2>Porto</h2>
+        <button class="menu-btn">Voir le Menu</button>
+        <ul class="menu-list">
+            <li>Francesinha</li>
+            <li>Bacalhau</li>
+            <li>Tripas à moda do Porto</li>
+            <li>Caldo Verde</li>
+            <li>Pastéis de Nata</li>
+            <li>Arroz de Pato</li>
+            <li>Polvo à Lagareiro</li>
+            <li>Bolinhos de Bacalhau</li>
+            <li>Pão de Ló</li>
+        </ul>
+    </div>
+
+</div>
+
+<script>
+    const buttons = document.querySelectorAll(".menu-btn");
+
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const menu = btn.nextElementSibling;
+            menu.classList.toggle("show");
+        });
+    });
+</script>
+
+</body>
+</html>
