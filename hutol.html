@@ -1,0 +1,341 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projet hôtels autour du monde</title>
+  <link rel="stylesheet" href="hutol.css" >
+</head>
+<body>
+  <header>
+    <h1> Hôtels </h1>
+    <p>Vitrine simple pour  hôtels situés dans différentes villes .</p>
+  </header>
+
+  <main class="container" aria-live="polite">
+    <section class="grid" id="hotels-grid">
+      <!-- Carte template (répéter pour chaque hôtel) -->
+      <!-- 1 Marrakech -->
+      <article class="card" data-city="Marrakech" data-name="Riad Azur Marrakech" data-price="120€" data-rating="4.6" data-image="hotelimage">
+        <div class="media" style="background-image:url(hotelimage.jpeg);" aria-hidden="true">
+          <div class="badge" title="Marrakech">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.1 2 4.8 3.7 3 6.5L12 22l9-15.5C19.2 3.7 15.9 2 12 2z"/></svg>
+            Marrakech
+          </div>
+        </div>
+        <div class="content">
+          <div class="city">
+            <div>
+              <div class="hotel-name">Riad Azur Marrakech</div>
+              <div class="desc">Une maison d'hôtes traditionnelle au coeur de la médina, patio, piscine et petit-déjeuner inclus.</div>
+            </div>
+            <div style="text-align:right">
+              <div class="rating">★ 4.6</div>
+              <div class="price">120€/nuit</div>
+            </div>
+          </div>
+
+          <div class="meta">
+            <div class="rating">Localisation : Médina</div>
+            <div class="price">120€/nuit</div>
+          </div>
+
+          <div class="actions">
+            <button class="btn btn--primary" onclick="openModal(this.closest('.card'))" aria-label="Voir plus Riad Azur Marrakech">Voir</button>
+             <a href="inscrire re.html" class="btn btn--ghost">Réserver</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2 Roma -->
+      <article class="card" data-city="Rome" data-name="Hotel Colosseo Roma" data-price="150€" data-rating="4.5" data-image="hotelroma">
+        <div class="media" style="background-image:url('hotelroma.jpeg');">
+          <div class="badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 4.8 3.7 3 6.5L12 22l9-15.5C19.2 3.7 15.9 2 12 2z"/></svg>Rome</div>
+        </div>
+        <div class="content">
+          <div class="city">
+            <div>
+              <div class="hotel-name">Hotel Colosseo Roma</div>
+              <div class="desc">À deux pas du Colisée, chambres modernes et terrasse avec vue.</div>
+            </div>
+            <div style="text-align:right">
+              <div class="rating">★ 4.5</div>
+              <div class="price">150€/nuit</div>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="rating">Local : Centro Storico</div>
+            <div class="price">150€/nuit</div>
+          </div>
+          <div class="actions">
+            <button class="btn btn--primary" onclick="openModal(this.closest('.card'))">Voir</button>
+             <a href="inscrire re.html" class="btn btn--ghost">Réserver</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3 Barcelona -->
+      <article class="card" data-city="Barcelona" data-name="Casa Gaudí Barcelona" data-price="135€" data-rating="4.4" data-image="hotelbarca">
+        <div class="media" style="background-image:url('hotelbarca.jpeg');">
+          <div class="badge">Barcelona</div>
+        </div>
+        <div class="content">
+          <div class="city">
+            <div>
+              <div class="hotel-name">Casa Gaudí Barcelona</div>
+              <div class="desc">Design inspiré de Gaudí, proche de la Sagrada Familia et des Ramblas.</div>
+            </div>
+            <div style="text-align:right">
+              <div class="rating">★ 4.4</div>
+              <div class="price">135€/nuit</div>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="rating">Quartier : Eixample</div>
+            <div class="price">135€/nuit</div>
+          </div>
+          <div class="actions">
+            <button class="btn btn--primary" onclick="openModal(this.closest('.card'))">Voir</button>
+            
+            <a href="inscrire re.html" class="btn btn--ghost">Réserver</a>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- 4 New York -->
+      <article class="card" data-city="New York" data-name="Skyline Suites New York" data-price="240€" data-rating="4.7" data-image="hotelnew">
+        <div class="media" style="background-image:url('hotelnew.jpeg');">
+          <div class="badge">New York</div>
+        </div>
+        <div class="content">
+          <div class="city">
+            <div>
+              <div class="hotel-name">Skyline Suites New York</div>
+              <div class="desc">Chambres avec vue sur Manhattan, proche des transports.</div>
+            </div>
+            <div style="text-align:right">
+              <div class="rating">★ 4.7</div>
+              <div class="price">240€/nuit</div>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="rating">Quartier : Midtown</div>
+            <div class="price">240€/nuit</div>
+          </div>
+          <div class="actions">
+            <button class="btn btn--primary" onclick="openModal(this.closest('.card'))">Voir</button>
+            <a href="inscrire re.html" class="btn btn--ghost">Réserver</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5 Paris -->
+      <article class="card" data-city="Paris" data-name="Le Jardin Paris" data-price="210€" data-rating="4.6" data-image="hotelparis">
+        <div class="media" style="background-image:url('hotelparis.jpeg');">
+          <div class="badge">Paris</div>
+        </div>
+        <div class="content">
+          <div class="city">
+            <div>
+              <div class="hotel-name">Le Jardin Paris</div>
+              <div class="desc">Charme parisien, petit jardin, petit-déjeuner à la française.</div>
+            </div>
+            <div style="text-align:right">
+              <div class="rating">★ 4.6</div>
+              <div class="price">210€/nuit</div>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="rating">Arrondissement : 7e</div>
+            <div class="price">210€/nuit</div>
+          </div>
+          <div class="actions">
+            <button class="btn btn--primary" onclick="openModal(this.closest('.card'))">Voir</button>
+             <a href="inscrire re.html" class="btn btn--ghost">Réserver</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6 Porto -->
+      <article class="card" data-city="Porto" data-name="Ribeira View Porto" data-price="110€" data-rating="4.3" data-image="hotelparis">
+        <div class="media" style="background-image:url('hotelporto.jpeg');">
+          <div class="badge">Porto</div>
+        </div>
+        <div class="content">
+          <div class="city">
+            <div>
+              <div class="hotel-name">Ribeira View Porto</div>
+              <div class="desc">Vue sur le Douro, chambres cosy et accueil chaleureux.</div>
+            </div>
+            <div style="text-align:right">
+              <div class="rating">★ 4.3</div>
+              <div class="price">110€/nuit</div>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="rating">Quartier : Ribeira</div>
+            <div class="price">110€/nuit</div>
+          </div>
+          <div class="actions">
+            <button class="btn btn--primary" onclick="openModal(this.closest('.card'))">Voir</button>
+             <a href="inscrire re.html" class="btn btn--ghost">Réserver</a>
+        </div>
+      </article>
+
+      <!-- 7 Berlin -->
+      <article class="card" data-city="Berlin" data-name="Loft Mitte Berlin" data-price="130€" data-rating="4.4" data-image="hotelberlin">
+        <div class="media" style="background-image:url('hotelberlin.jpeg');">
+          <div class="badge">Berlin</div>
+        </div>
+        <div class="content">
+          <div class="city">
+            <div>
+              <div class="hotel-name">Loft Mitte Berlin</div>
+              <div class="desc">Design scandinave, parfait pour explorer musées et cafés.</div>
+            </div>
+            <div style="text-align:right">
+              <div class="rating">★ 4.4</div>
+              <div class="price">130€/nuit</div>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="rating">Quartier : Mitte</div>
+            <div class="price">130€/nuit</div>
+          </div>
+          <div class="actions">
+            <button class="btn btn--primary" onclick="openModal(this.closest('.card'))">Voir</button>
+             <a href="inscrire re.html" class="btn btn--ghost">Réserver</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 8 Amsterdam -->
+      <article class="card" data-city="Amsterdam" data-name="Canal Boutique Amsterdam" data-price="160€" data-rating="4.5" data-image="hotelamstrdam">
+        <div class="media" style="background-image:url('hotelamstrdam.jpeg');">
+          <div class="badge">Amsterdam</div>
+        </div>
+        <div class="content">
+          <div class="city">
+            <div>
+              <div class="hotel-name">Canal Boutique Amsterdam</div>
+              <div class="desc">Charmant hôtel le long d'un canal, accès vélo et petit déjeuner.</div>
+            </div>
+            <div style="text-align:right">
+              <div class="rating">★ 4.5</div>
+              <div class="price">160€/nuit</div>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="rating">Quartier : Jordaan</div>
+            <div class="price">160€/nuit</div>
+          </div>
+          <div class="actions">
+            <button class="btn btn--primary" onclick="openModal(this.closest('.card'))">Voir</button>
+             <a href="inscrire re.html" class="btn btn--ghost">Réserver</a>
+          </div>
+        </div>
+      </article>
+
+      
+
+    </section>
+
+    <footer>
+      © 2025 Guide Touristique de Ville . Découvre & Voyage : Hôtels, Restaurants et Lieux Magiques.
+    </footer>
+  </main>
+
+  <!-- Modal -->
+  <div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document">
+      <div class="left" id="modalImage" style="background-image:url('')"></div>
+      <div class="right">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <h3 id="modalTitle">Titre</h3>
+            <div id="modalCity" style="color:#6b7280;font-weight:600"></div>
+          </div>
+          <button class="close" aria-label="Fermer la fenêtre" onclick="closeModal()">✕</button>
+        </div>
+
+        <p id="modalDesc">Description détaillée de l'hôtel. Ajoutez des équipements, politiques et liens.</p>
+
+        <ul style="margin:10px 0 14px;color:#334155;line-height:1.45">
+          <li id="modalRating">Note : ★ 4.6</li>
+          <li id="modalPrice">Prix indicatif : 120€/nuit</li>
+          <li id="modalLocation">Localisation : Centre ville</li>
+        </ul>
+
+        <div style="display:flex;gap:10px;">
+          <button class="btn btn--primary" onclick="bookFromModal()">Réserver maintenant</button>
+          <button class="btn btn--ghost" onclick="closeModal()">Fermer</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Ouvre la modal en lisant data-* de la carte
+    function openModal(card){
+      const backdrop = document.getElementById('modalBackdrop');
+      const title = document.getElementById('modalTitle');
+      const city = document.getElementById('modalCity');
+      const desc = document.getElementById('modalDesc');
+      const rating = document.getElementById('modalRating');
+      const price = document.getElementById('modalPrice');
+      const location = document.getElementById('modalLocation');
+      const img = document.getElementById('modalImage');
+
+      const name = card.dataset.name || 'Hôtel';
+      const c = card.dataset.city || '';
+      const p = card.dataset.price || '';
+      const r = card.dataset.rating || '';
+      const image = card.dataset.image || '';
+
+      title.textContent = name;
+      city.textContent = c;
+      desc.textContent = card.querySelector('.desc') ? card.querySelector('.desc').textContent : "Description non disponible.";
+      rating.textContent = 'Note : ★ ' + r;
+      price.textContent = 'Prix indicatif : ' + p;
+      location.textContent = 'Localisation : ' + (card.querySelector('.meta') ? card.querySelector('.meta').textContent.trim() : '—');
+
+      img.style.backgroundImage = image ? 'url(\"' + image + '\")' : '';
+      backdrop.classList.add('show');
+      backdrop.setAttribute('aria-hidden','false');
+
+      // focus trap simple
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(){
+      const backdrop = document.getElementById('modalBackdrop');
+      backdrop.classList.remove('show');
+      backdrop.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+    }
+
+    // Example reservation handler
+    function reserve(card){
+      const name = card.dataset.name || 'cet hôtel';
+      alert('Simuler réservation pour ' + name + '. Ajoutez ici votre logique (formulaire / redirection).');
+    }
+
+    function bookFromModal(){
+      alert('Simuler réservation depuis la modal. Intégrez votre flux de paiement ou formulaire ici.');
+      closeModal();
+    }
+
+    // fermer modal si on clique en dehors
+    document.getElementById('modalBackdrop').addEventListener('click', function(e){
+      if (e.target === this) closeModal();
+    });
+
+    // fermeture avec ESC
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') closeModal();
+    });</script>
+</body>
+</html>
